@@ -1,0 +1,218 @@
+:root {
+  --color-primary: #4a90e2;
+  --color-primary-dark: #2e5c8a;
+  --color-secondary: #f5a623;
+  --color-gray-light: #f8f9fa;
+  --color-gray-medium: #e0e6ed;
+  --color-gray-dark: #333;
+  --color-success: #47b881;
+  --color-error: #d0392b;
+  --color-border: #ddd;
+  --spacing-unit: 8px;
+  --border-radius: 4px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-gray-dark);
+  background-color: #fff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  background-color: var(--color-gray-light);
+  border-bottom: 1px solid var(--color-border);
+  padding: calc(var(--spacing-unit) * 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 2);
+  align-items: center;
+}
+
+.save-status {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit));
+  border-radius: var(--border-radius);
+}
+
+.save-status.saved {
+  color: var(--color-success);
+  background-color: rgba(71, 184, 129, 0.1);
+}
+
+.save-status.unsaved {
+  color: var(--color-secondary);
+  background-color: rgba(245, 166, 35, 0.1);
+}
+
+.app-main {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+}
+
+/* Button styles */
+.btn {
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-gray-light);
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  color: var(--color-gray-dark);
+  border: 1px solid var(--color-border);
+}
+
+.btn-tertiary:hover {
+  background-color: var(--color-gray-light);
+}
+
+.btn-danger {
+  background-color: var(--color-error);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #a0281f;
+}
+
+.btn-small {
+  padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.5);
+  font-size: 12px;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: calc(var(--spacing-unit) * 3);
+  border-radius: var(--border-radius);
+  min-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  font-size: 20px;
+}
+
+.modal-content .btn {
+  margin-right: calc(var(--spacing-unit));
+  display: block;
+  width: 100%;
+  margin-bottom: calc(var(--spacing-unit));
+}
+
+/* Input and form styles */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+  font-size: 14px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-medium);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

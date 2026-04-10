@@ -1,0 +1,117 @@
+.expectation-editor {
+  padding: calc(var(--spacing-unit) * 2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.expectation-editor h2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  font-size: 16px;
+  color: var(--color-gray-dark);
+}
+
+.expectations-grid-wrapper {
+  flex: 1;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: white;
+}
+
+.expectations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.expectations-table thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-gray-light);
+  z-index: 10;
+}
+
+.expectations-table th {
+  padding: calc(var(--spacing-unit) * 1);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  text-align: left;
+  background-color: var(--color-gray-light);
+  color: var(--color-gray-dark);
+}
+
+.expectations-table th.selected {
+  background-color: rgba(74, 144, 226, 0.15);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.expectations-table td {
+  padding: calc(var(--spacing-unit) * 0.75);
+  border: 1px solid var(--color-border);
+}
+
+.dimension-cell {
+  font-weight: 600;
+  background-color: var(--color-gray-light);
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  min-width: 120px;
+}
+
+.expectation-cell {
+  background-color: white;
+  padding: 0;
+  transition: background-color 0.2s;
+}
+
+.expectation-cell:hover {
+  background-color: rgba(74, 144, 226, 0.05);
+}
+
+.expectation-cell.selected {
+  background-color: rgba(74, 144, 226, 0.15);
+  border-color: var(--color-primary);
+}
+
+.expectation-cell select {
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 0.75);
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+.expectation-cell select:focus {
+  outline: none;
+  background-color: white;
+}
+
+.selected-expectation-detail {
+  margin-top: calc(var(--spacing-unit) * 2);
+  padding: calc(var(--spacing-unit) * 1.5);
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.selected-expectation-detail h3 {
+  font-size: 14px;
+  margin-bottom: calc(var(--spacing-unit));
+  color: var(--color-gray-dark);
+}
+
+.selected-expectation-detail p {
+  font-size: 12px;
+  color: #666;
+}
+
+.selected-expectation-detail strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}

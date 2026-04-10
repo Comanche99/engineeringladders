@@ -1,0 +1,56 @@
+.radar-visualization {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.radar-visualization h2 {
+  font-size: 16px;
+  color: var(--color-gray-dark);
+  margin-bottom: 0;
+}
+
+.radar-chart-container {
+  flex: 1;
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-unit));
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-legend {
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-unit) * 1.5);
+}
+
+.radar-legend h3 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: calc(var(--spacing-unit));
+}
+
+.radar-legend ul {
+  list-style: none;
+  padding: 0;
+}
+
+.radar-legend li {
+  font-size: 12px;
+  padding: calc(var(--spacing-unit) * 0.5) 0;
+  color: #666;
+}
+
+.radar-legend strong {
+  color: var(--color-primary);
+  font-weight: 600;
+  display: inline-block;
+  min-width: 20px;
+}
